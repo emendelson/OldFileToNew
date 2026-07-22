@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OldFileToNew Help</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 15px/1.5 -apple-system, "SF Pro Text", Helvetica, Arial, sans-serif;
+    margin: 0; padding: 0 44px 60px;
+    color: #1d1d1f; background: #ffffff;
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e6e6e6; background: #1e1e1e; }
+    a { color: #6fb7ff; }
+    .card { background: #2a2a2a; border-color: #3a3a3a; }
+    code { background: #333; }
+    th { border-color: #3a3a3a; }
+    td { border-color: #333; }
+  }
+  header { padding: 34px 0 10px; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.02em; }
+  .tagline { color: #86868b; font-size: 15px; margin: 0 0 8px; }
+  h2 { font-size: 20px; margin: 34px 0 10px; letter-spacing: -0.01em; }
+  h3 { font-size: 15px; margin: 20px 0 6px; }
+  p { margin: 10px 0; }
+  ul { margin: 8px 0 8px 2px; padding-left: 20px; }
+  li { margin: 3px 0; }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { font: 12.5px "SF Mono", Menlo, monospace; background: #f2f2f4; padding: 1px 5px; border-radius: 4px; }
+  .card {
+    background: #f7f7f8; border: 1px solid #e6e6e6; border-radius: 12px;
+    padding: 4px 20px 16px; margin: 14px 0;
+  }
+  table { border-collapse: collapse; width: 100%; margin: 8px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 6px 10px; vertical-align: top; }
+  th { border-bottom: 1px solid #d2d2d7; font-weight: 600; }
+  td { border-bottom: 1px solid #efeff1; }
+  .muted { color: #86868b; font-size: 13px; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 600; padding: 1px 8px;
+          border-radius: 20px; background: #e8f0fe; color: #1a56c4; vertical-align: middle; }
+  @media (prefers-color-scheme: dark) { .pill { background: #24344f; color: #9cc4ff; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>OldFileToNew</h1>
+  <p class="tagline">Convert old documents to modern formats.</p>
+</header>
+
+<p>Drag one or more old files onto the OldFileToNew window or icon — or choose
+<strong>File ▸ Open…</strong> — and each is converted and saved next to the original.
+You can also drop folders’ worth of files at once (folders themselves are skipped).</p>
+
+<div class="card">
+<h3>How it works</h3>
+<p>OldFileToNew recognizes each file automatically — you don’t pick the input type.
+By default it writes <strong>OpenDocument</strong> files (<code>.odt</code>, <code>.ods</code>,
+<code>.odp</code>, <code>.odg</code>), which open in LibreOffice, Microsoft Office, Apple’s
+iWork apps, and most modern software.</p>
+<p>In <strong>Settings…</strong> you can choose a more familiar output format for each kind
+of document. Text documents can be saved as Word, RTF, HTML, or plain text using tools built
+into macOS. Spreadsheets, presentations, and drawings can be saved as Excel, PowerPoint, PDF,
+or images if you have the free <a href="https://www.libreoffice.org">LibreOffice</a> installed;
+those options are dimmed until it is. Converting to any non-OpenDocument format may lose some
+formatting.</p>
+<h3>Text encoding</h3>
+<p>Old files don’t record which character set they use. OldFileToNew’s default
+(<em>Automatic</em>) works for most Mac documents (Mac&nbsp;Roman). If accented or special
+characters look wrong, open <strong>Settings…</strong> and pick the matching encoding — for
+example <em>MacCyrillic</em>, <em>MacGreek</em>, or a Windows code page.</p>
+</div>
+
+<h2>Supported formats</h2>
+<p>OldFileToNew converts documents from all of the applications below, spanning classic Mac
+software, WordPerfect, Microsoft, Apple iWork, and several drawing and page-layout programs.</p>
+
+<h3>Word processors &amp; text</h3>
+<div class="card">
+<table>
+<tr><th>Family</th><th>Applications (examples)</th></tr>
+<tr><td>Classic Mac</td><td>MacWrite, MacWrite&nbsp;II/Pro, WriteNow, Nisus Writer, Microsoft Word for Mac 1–5.1, MacDoc, WriterPlus, FullWrite, ClarisWorks/AppleWorks, BeagleWorks/WordPerfect Works, DOCMaker, eDOC, Tex-Edit, Mariner Write, Acta, and more</td></tr>
+<tr><td>WordPerfect</td><td>WordPerfect documents (DOS, Windows, Mac)</td></tr>
+<tr><td>Microsoft Works</td><td>Works word-processor documents</td></tr>
+<tr><td>AbiWord</td><td>AbiWord documents</td></tr>
+<tr><td>StarOffice</td><td>StarWriter / early OpenOffice documents</td></tr>
+<tr><td>Apple iWork</td><td>Pages <span class="muted">(single-file documents)</span></td></tr>
+<tr><td>E-books</td><td>various e-book / e-reader formats</td></tr>
+</table>
+<p class="muted">Word-processing documents can be saved as ODF, Word (.docx/.doc), RTF, HTML,
+or plain text — all without any extra software.</p>
+</div>
+
+<h3>Spreadsheets &amp; databases</h3>
+<div class="card">
+<table>
+<tr><th>Family</th><th>Applications (examples)</th></tr>
+<tr><td>Classic Mac</td><td>ClarisWorks/AppleWorks spreadsheet &amp; database, Microsoft Multiplan, BeagleWorks, GreatWorks, and other early spreadsheets</td></tr>
+<tr><td>Microsoft Works</td><td>Works spreadsheets</td></tr>
+<tr><td>Apple iWork</td><td>Numbers <span class="muted">(single-file documents)</span></td></tr>
+<tr><td>Lotus / Quattro</td><td>via the Works library</td></tr>
+</table>
+<p class="muted">Saved as ODF (.ods) built-in; Excel (.xlsx) or CSV with LibreOffice.</p>
+</div>
+
+<h3>Presentations</h3>
+<div class="card">
+<table>
+<tr><th>Family</th><th>Applications</th></tr>
+<tr><td>Classic Mac</td><td>Microsoft PowerPoint for Mac 1–4</td></tr>
+<tr><td>Apple iWork</td><td>Keynote <span class="muted">(single-file documents)</span></td></tr>
+</table>
+<p class="muted">Saved as ODF (.odp) built-in; PowerPoint (.pptx) or PDF with LibreOffice.</p>
+</div>
+
+<h3>Drawings &amp; page layout</h3>
+<div class="card">
+<table>
+<tr><th>Library</th><th>Formats</th></tr>
+<tr><td>Classic Mac drawing</td><td>MacDraw, MacDraw&nbsp;II/Pro, ClarisWorks/AppleWorks draw &amp; paint, SuperPaint, Canvas, and many more</td></tr>
+<tr><td>CorelDRAW</td><td>CorelDRAW documents</td></tr>
+<tr><td>Microsoft Visio</td><td>Visio diagrams</td></tr>
+<tr><td>Microsoft Publisher</td><td>Publisher documents</td></tr>
+<tr><td>QuarkXPress</td><td>QuarkXPress documents</td></tr>
+<tr><td>Adobe PageMaker</td><td>PageMaker documents</td></tr>
+<tr><td>Adobe FreeHand</td><td>FreeHand drawings</td></tr>
+<tr><td>Zoner Draw</td><td>Zoner Draw documents</td></tr>
+</table>
+<p class="muted">Saved as ODF (.odg) built-in; PDF, SVG, or PNG with LibreOffice.</p>
+</div>
+
+<h2>Notes &amp; limitations</h2>
+<ul>
+<li>Some very old or damaged files may not convert; the app will say so rather than write a broken file.</li>
+<li>Old Mac <strong>Excel</strong> files are not currently supported.</li>
+<li>Package-format iWork documents (folders) are not yet supported — export a single-file copy first.</li>
+<li>Converting to a non-OpenDocument format may lose some formatting.</li>
+</ul>
+
+<h2>Acknowledgements</h2>
+<p>OldFileToNew is built on the <strong>libwpd / writerperfect</strong> family of open-source
+import libraries — including <strong>libmwaw</strong> by Laurent Alonso, whose detailed catalog
+of supported classic-Mac applications informed this list. See the libmwaw supported-formats
+page at <a href="https://sourceforge.net/p/libmwaw/wiki/Home/">sourceforge.net/p/libmwaw/wiki/Home/</a>.
+These libraries are distributed under the LGPL&nbsp;2.1+ / MPL&nbsp;2.0 licenses.</p>
+
+</body>
+</html>

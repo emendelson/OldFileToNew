@@ -1,0 +1,15 @@
+# Build products
+build/
+.build/
+*.o
+*.lo
+*.la
+
+# The bundled converter is produced by build-from-source/05-build-app.sh
+Sources/OldFileToNew/Resources/Files/wpft2odf
+
+# Icon intermediate
+Icons/AppIcon.iconset/
+
+# macOS cruft
+.DS_Store
