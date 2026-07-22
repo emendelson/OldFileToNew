@@ -4,6 +4,8 @@ A small macOS app that converts **old documents to modern formats**. Drag one or
 legacy files onto its window (or use **File ▸ Open…**) and each is converted and saved
 next to the original — no need to identify the file type; it's detected automatically.
 
+**[⬇ Download OldFileToNew 1.0](https://github.com/emendelson/OldFileToNew/releases/latest)** — notarized, universal, macOS 12+. Or [build it from source](build-from-source/).
+
 By default it writes **OpenDocument** files (`.odt`, `.ods`, `.odp`, `.odg`), which open
 in LibreOffice, Microsoft Office, Apple's iWork apps, and most modern software. In
 **Settings…** you can pick more familiar per-category output formats (Word, RTF, HTML,
