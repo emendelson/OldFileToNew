@@ -31,7 +31,7 @@ msg() { printf '\n\033[1;34m▸ %s\033[0m\n' "$*"; }
 # autobuild [configure-args...] — run from inside a source dir. Universal static
 # install into $PREFIX. Honors any CXXFLAGS/ICU_* env the caller exports first.
 autobuild() {
-  ./configure --prefix="$PREFIX" --enable-static --disable-shared --disable-werror "$@"
+  ./configure --prefix="$PREFIX" --enable-static --disable-shared --disable-werror --disable-tests "$@"
   make -j"$NCPU"
   make install
 }

@@ -22,6 +22,13 @@ any Mac with no Homebrew and no other dependencies.
   linked into the finished binary (see "Why it's distributable" below).
   (Optional, only to regenerate the icon: `brew install librsvg`.)
 
+  **cppunit is intentionally not required.** Seven of these libraries (librevenge,
+  libetonyek, libcdr, libqxp, libvisio, libzmf, libe-book) default to building a test
+  suite that needs cppunit. We don't build or ship the tests, so `common.sh`'s
+  `autobuild` passes `--disable-tests` and cppunit is never needed. On a machine that
+  happens to have cppunit installed the build works either way; on a pristine one it
+  builds without it.
+
 ## Build
 
 ```sh

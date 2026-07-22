@@ -4,10 +4,13 @@
 set -euo pipefail
 source "$(dirname "$0")/common.sh"
 
-msg "librevenge";                         ( cd "$SRC/librevenge" && autogen_build )
+msg "librevenge";                         ( cd "$SRC/librevenge" && \
+  CXXFLAGS="$ARCHS -O2 -I$BOOST_INC" CPPFLAGS="-I$BOOST_INC" autogen_build )
 msg "libwpd (PATCHED: WP6 cross-refs + WP5 page numbering)"
-                                          ( cd "$SRC/libwpd"     && autogen_build )
-msg "libwpg";                             ( cd "$SRC/libwpg"     && autogen_build )
+                                          ( cd "$SRC/libwpd"     && \
+  CXXFLAGS="$ARCHS -O2 -I$BOOST_INC" CPPFLAGS="-I$BOOST_INC" autogen_build )
+msg "libwpg";                             ( cd "$SRC/libwpg"     && \
+  CXXFLAGS="$ARCHS -O2 -I$BOOST_INC" CPPFLAGS="-I$BOOST_INC" autogen_build )
 msg "libodfgen";                          ( cd "$SRC/libodfgen"  && autogen_build )
 
 msg "lcms2 (color engine, for CorelDRAW/FreeHand)"
