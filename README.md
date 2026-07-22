@@ -1,7 +1,11 @@
 # OldFileToNew
 
-A small macOS app that converts **old documents to modern formats**. Drag one or more
-legacy files onto its window (or use **File ▸ Open…**) and each is converted and saved
+A small macOS universal app that converts **old documents to modern formats**, 
+based on and inspired by the Intel-only **anyOSX by Laurent Alonso** 
+(https://sourceforge.net/projects/libmwaw/files/).
+
+Drag one or more
+legacy files onto the OldFileToNew window (or use **File ▸ Open…**) and each is converted and saved
 next to the original — no need to identify the file type; it's detected automatically.
 
 **[⬇ Download OldFileToNew 1.0](https://github.com/emendelson/OldFileToNew/releases/latest)** — notarized, universal, macOS 12+. Or [build it from source](build-from-source/).
